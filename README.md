@@ -10,3 +10,4 @@ TBD...
 - LICENSE
 - README.md
 - Speeches_War_Clean.csv
+- speeches.csv
