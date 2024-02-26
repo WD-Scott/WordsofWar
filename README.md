@@ -6,6 +6,7 @@ TBD...
 # Manifest:
 - BertSeqVect.py
 - Cleaning_Data.ipynb
+- EDA.ipynb
 - Exploring_and_BasicNN.ipynb
 - LICENSE
 - README.md
