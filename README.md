@@ -26,7 +26,11 @@ This Jupyter Notebook contains code that explores the data using some the pre-tr
 
 `Speeches_War_Clean.csv`
 
+This Excel (comma-separated) file contains the cleaned data used for modeling.
+
 `speeches.csv`
+
+This Excel (comma-separated) file contains the original source data.
 
 ## License and ReadME
 
