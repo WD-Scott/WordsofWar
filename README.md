@@ -6,30 +6,30 @@ TBD...
 # Manifest:
 
 ## Python Module Files (helper functions, classes)
-➡ `BertSeqVect.py`
+`BertSeqVect.py`
 
 ## Jupyter Notebooks
 
-➡ `Cleaning_Data.ipynb`
+`Cleaning_Data.ipynb`
 
 The Jupyter Notebook contains the code used to clean the input data (speeches.csv).
 
-➡ `EDA.ipynb`
+`EDA.ipynb`
 
 This Jupyter Notebook contains code and visualizations for exploratory data analysis.
 
-➡ `Exploring_and_BasicNN.ipynb`
+`Exploring_and_BasicNN.ipynb`
 
 This Jupyter Notebook contains code that explores the data using some the pre-trained BERT model and vectorizer (see BertSeqVect.py), as well as a basic sequentail, fully-connected neural network.
 
 ## Data Files
 
-➡ `Speeches_War_Clean.csv`
+`Speeches_War_Clean.csv`
 
-➡ `speeches.csv`
+`speeches.csv`
 
 ## License and ReadME
 
-➡ `LICENSE`
+`LICENSE`
 
-➡ `README.md`
+`README.md`
