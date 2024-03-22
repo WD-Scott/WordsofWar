@@ -3,6 +3,8 @@ Analyze a corpus of speeches given by US presidents in the lead-up to major wars
 
 TBD...
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Manifest:
 <details>
 <summary><img src="images/py.png" align="left" width="40" height="40" /> Python Module Files (helper functions, classes)</summary>
@@ -37,9 +39,3 @@ This file contains the cleaned data used for modeling.
 
 This file contains the original source data.
 </details>
-
-## License and ReadME
-
-`LICENSE`
-
-`README.md`
