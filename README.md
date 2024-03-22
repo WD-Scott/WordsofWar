@@ -20,7 +20,7 @@ This Jupyter Notebook contains code and visualizations for exploratory data anal
 
 `Exploring_and_BasicNN.ipynb`
 
-This Jupyter Notebook contains code that explores the data using some the pre-trained BERT model and vectorizer (see BertSeqVect.py), as well as a basic sequentail, fully-connected neural network.
+This Jupyter Notebook contains code that explores the data using some the pre-trained BERT model and vectorizer (see BertSeqVect.py). We also experiment with three models: (1) CNN, (2) gated RNN (LSTM), and (3) gated RNN (LSTM) with attention mechanism. After developing these models, we then begin exploring various ways to perform interpretable learning and try and discern how the last model differentiatese the two classes.
 
 ## Data Files
 
