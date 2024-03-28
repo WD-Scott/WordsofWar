@@ -13,7 +13,8 @@ This project aims to use deep learning techniques to decode the subtle nuances a
 
 This Python module file includes the `BertSequenceVectorizer` class, which is designed to convert input text into vector representations using a pre-trained the Bidirectional Encoder Representations from Transformers (BERT) model.
 
-  * Features
+  * Features:
+    
     **BERT-based Vectorization**: Utilizes a pre-trained BERT model to generate vector representations of input text.
     
     **Tokenization**: Employs the BERT tokenizer to tokenize input text before vectorization.
@@ -21,7 +22,7 @@ This Python module file includes the `BertSequenceVectorizer` class, which is de
     **Customizable Sequence Length**: Allows customization of the maximum length of input sequences for vectorization.
  
   * Usage
-    Initialization
+    
     Upon instantiation of the `BertSequenceVectorizer` object, the class automatically loads a pre-trained BERT model (bert-base-uncased by default) and its corresponding tokenizer.     Additionally, it specifies the maximum length of input sequences for vectorization.
 </details>
 <br>
