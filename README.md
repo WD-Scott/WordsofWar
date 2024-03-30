@@ -47,9 +47,9 @@ This Jupyter Notebook contains code for our modeling experiments. We experiment 
 
 - ### `Speeches_War_Clean.csv`
 
-This file contains the cleaned data used for modeling.
+This file contains the cleaned data that we use for modeling.
 
-- ### `speeches.csv`
+- ### `presidential_speeches.csv`
 
 This file contains the original source data.
 
