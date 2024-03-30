@@ -31,15 +31,15 @@ This Python module file includes the `BertSequenceVectorizer` class, which is de
 
 - ### `Cleaning_Data.ipynb`
 
-The Jupyter Notebook contains the code used to clean the input data (speeches.csv).
+The Jupyter Notebook contains the code used to clean the input data (speeches.csv) and set up the training, testing, and validation sets. This notebook uses the pre-trained BERT model and vectorizer (see BertSeqVect.py) to tokenize and vectorize the text data.
 
 - ### `EDA.ipynb`
 
-This Jupyter Notebook contains code and visualizations for exploratory data analysis.
+This Jupyter Notebook contains code and visualizations from our exploratory data analysis.
 
-- ### `Exploring_and_BasicNN.ipynb`
+- ### `Modeling.ipynb`
 
-This Jupyter Notebook contains code that explores the data using some the pre-trained BERT model and vectorizer (see BertSeqVect.py). We also experiment with three models: (1) CNN, (2) gated RNN (LSTM), and (3) gated RNN (LSTM) with attention mechanism. After developing these models, we then begin exploring various ways to perform interpretable learning and try and discern how the last model differentiatese the two classes.
+This Jupyter Notebook contains code for our modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), and (3) pre-trained transformer. After developing these models, we then begin exploring various ways to perform interpretable learning and try and discern how the models differentiate the two classes.
 </details>
 <br>
 <details>
@@ -52,4 +52,28 @@ This file contains the cleaned data used for modeling.
 - ### `speeches.csv`
 
 This file contains the original source data.
+
+- ### `X_test.csv`
+
+This file contains the testing features (the vector representations of the input text).
+
+- ### `X_train.csv`
+
+This file contains the training features (the vector representations of the input text).
+
+- ### `X_val.csv`
+
+This file contains the validation features (the vector representations of the input text).
+
+- ### `y_test.csv`
+
+This file contains the testing labels (binary response variable 'War').
+
+- ### `y_train.csv`
+
+This file contains the training labels (binary response variable 'War').
+
+- ### `y_val.csv`
+
+This file contains the validation labels (binary response variable 'War').
 </details>
