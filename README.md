@@ -11,7 +11,7 @@ This project aims to use deep learning techniques to decode the subtle nuances a
   
 - ### `BertSeqVect.py`
 
-This Python module file includes the `BertSequenceVectorizer` class, which is designed to convert input text into vector representations using a pre-trained the Bidirectional Encoder Representations from Transformers (BERT) model.
+This Python module file includes the `BertSequenceVectorizer` class, which we designed to convert input text into vector representations using a pre-trained the Bidirectional Encoder Representations from Transformers (BERT) model.
 
   * Features:
     
@@ -23,7 +23,7 @@ This Python module file includes the `BertSequenceVectorizer` class, which is de
  
   * Usage
     
-    Upon instantiation of the `BertSequenceVectorizer` object, the class automatically loads a pre-trained BERT model (bert-base-uncased by default) and its corresponding tokenizer.     Additionally, it specifies the maximum length of input sequences for vectorization.
+    Upon instantiation of the `BertSequenceVectorizer` object, the class automatically loads a pre-trained BERT model (bert-base-uncased by default) and its corresponding tokenizer, specifying the maximum length of input sequences for vectorization.
 </details>
 <br>
 <details>
@@ -31,7 +31,7 @@ This Python module file includes the `BertSequenceVectorizer` class, which is de
 
 - ### `Cleaning_Data.ipynb`
 
-The Jupyter Notebook contains the code used to clean the input data (speeches.csv) and set up the training, testing, and validation sets. This notebook uses the pre-trained BERT model and vectorizer (see BertSeqVect.py) to tokenize and vectorize the text data.
+The Jupyter Notebook contains the code we used to clean the input data (speeches.csv) and set up the training, testing, and validation sets. In this notebook, we use the pre-trained BERT model and vectorizer (see BertSeqVect.py) to tokenize and vectorize the text data.
 
 - ### `EDA.ipynb`
 
@@ -39,7 +39,7 @@ This Jupyter Notebook contains code and visualizations from our exploratory data
 
 - ### `Modeling.ipynb`
 
-This Jupyter Notebook contains code for our modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), and (3) pre-trained transformer. After developing these models, we then begin exploring various ways to perform interpretable learning and try and discern how the models differentiate the two classes.
+This Jupyter Notebook contains our code for the modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), and (3) pre-trained transformer. After developing these models, we begin exploring various ways to perform interpretable learning to discern how the models differentiate the two classes.
 </details>
 <br>
 <details>
