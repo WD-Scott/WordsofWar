@@ -24,6 +24,11 @@ This Python module file includes the `BertSequenceVectorizer` class, which we de
   * Usage
     
     Upon instantiation of the `BertSequenceVectorizer` object, the class automatically loads a pre-trained BERT model (bert-base-uncased by default) and its corresponding tokenizer, specifying the maximum length of input sequences for vectorization.
+
+- ### `plot_history.py`
+
+This Python module file contains a helper function for plotting model history (accuracy, validation accuracy, loss, and validation loss).
+    
 </details>
 <br>
 <details>
