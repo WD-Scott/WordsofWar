@@ -1,4 +1,4 @@
-<div align="left">
+<div align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" style="margin-right: 40px;"></a>
   <a href="https://github.com/WD-Scott/WordsofWar"><img alt="Static Badge" src="https://img.shields.io/badge/Repo_Status%3A-Under_Development-blue?style=flat&labelColor=%23232D4B&color=%23E57200" style="margin-left: 20px;"></a>
 </div>
