@@ -1,6 +1,6 @@
 <div align="left">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" style="margin-right: 10px;"></a>
-  <a href="https://github.com/WD-Scott/WordsofWar"><img alt="Static Badge" src="https://img.shields.io/badge/Repo_Status%3A-Under_Development-blue?style=flat&labelColor=%23232D4B&color=%23E57200"></a>
+  <a href="https://github.com/WD-Scott/WordsofWar"><img alt="Static Badge" src="https://img.shields.io/badge/Repo_Status%3A-Under_Development-blue?style=flat&labelColor=%23232D4B&color=%23E57200" style="margin-left: 10px;"></a>
 </div>
 
 
