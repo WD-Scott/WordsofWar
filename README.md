@@ -1,6 +1,8 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<div align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/WD-Scott/WordsofWar"><img src="https://img.shields.io/badge/Repo_Status%3A-Work_in_Progress-blue?style=plastic&labelColor=%23232D4B&color=%23E57200" alt="Repo Status: Work in Progress"></a>
+</div>
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Repo_Status%3A-Work_in_Progress-blue?style=plastic&labelColor=%23232D4B&color=%23E57200">
 
 # Words of War
 In political discourse and geopolitical analysis, national leaders' words hold profound significance, often serving as harbingers of pivotal historical moments. From impassioned rallying cries to calls for caution, presidential speeches preceding major conflicts encapsulate the multifaceted dynamics of decision-making at the apex of governance. This project aims to use deep learning techniques to decode the subtle nuances and underlying patterns of US presidential rhetoric that may signal US involvement in major wars. While accurate classification is desirable, we seek to take a step further and identify discriminative features between the two classes (i.e., interpretable learning).
