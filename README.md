@@ -7,7 +7,9 @@ In political discourse and geopolitical analysis, national leaders' words hold p
 
 Through an interdisciplinary fusion of machine learning and historical inquiry, we aspire to unearth insights into the predictive capacity of neural networks in discerning the preparatory rhetoric of US presidents preceding war. Indeed, as the venerable Prussian General and military theorist Carl von Clausewitz admonishes, "War is not merely an act of policy but a true political instrument, a continuation of political intercourse carried on with other means."
 
-# Manifest:
+<details>
+<summary><h1 style="font-size: 22px;">Manifest</h1></summary>
+  
 <details>
 <summary>Python Module Files (helper functions, classes)</summary>
   
@@ -83,4 +85,5 @@ This file contains the training labels (binary response variable 'War').
 - ### [`y_val.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_val.csv)
 
 This file contains the validation labels (binary response variable 'War').
+</details>
 </details>
