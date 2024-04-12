@@ -9,7 +9,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
 
 # Manifest:
 <details>
-<summary><img src="images/py.png" align="left" width="40" height="40" /> Python Module Files (helper functions, classes)</summary>
+<summary>Python Module Files (helper functions, classes)</summary>
   
 - ### [`BertSeqVect.py`](https://github.com/WD-Scott/WordsofWar/blob/main/Python_Modules/BertSeqVect.py)
 
@@ -34,7 +34,7 @@ This Python module file contains a helper function for plotting model history (a
 </details>
 <br>
 <details>
-<summary><img src="images/ipynb.png" align="left" width="40" height="40" /> Jupyter Notebooks</summary>
+<summary>Jupyter Notebooks</summary>
 
 - ### [`Cleaning_Data.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Cleaning_Data.ipynb)
 
@@ -50,7 +50,7 @@ This Jupyter Notebook contains our code for the modeling experiments. We experim
 </details>
 <br>
 <details>
-<summary><img src="images/csv.png" align="left" width="40" height="40" /> Data Files</summary>
+<summary>Data Files</summary>
 
 - ### [`Speeches_War_Clean.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/Speeches_War_Clean.csv)
 
