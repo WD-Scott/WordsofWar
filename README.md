@@ -11,7 +11,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
 <details>
 <summary>Python Module Files (helper functions, classes)</summary>
   
-- ### [`BertSeqVect.py`](https://github.com/WD-Scott/WordsofWar/blob/main/Python_Modules/BertSeqVect.py)
+### [`BertSeqVect.py`](https://github.com/WD-Scott/WordsofWar/blob/main/Python_Modules/BertSeqVect.py)
 
 This Python module file includes the `BertSequenceVectorizer` class, which we designed to convert input text into vector representations using a pre-trained the Bidirectional Encoder Representations from Transformers (BERT) model.
 
@@ -27,7 +27,7 @@ This Python module file includes the `BertSequenceVectorizer` class, which we de
     
     Upon instantiation of the `BertSequenceVectorizer` object, the class automatically loads a pre-trained BERT model (bert-base-uncased by default) and its corresponding tokenizer, specifying the maximum length of input sequences for vectorization.
 
-- ### [`plot_history.py`](https://github.com/WD-Scott/WordsofWar/blob/main/Python_Modules/plot_history.py)
+### [`plot_history.py`](https://github.com/WD-Scott/WordsofWar/blob/main/Python_Modules/plot_history.py)
 
 This Python module file contains a helper function for plotting model history (accuracy, validation accuracy, loss, and validation loss).
     
@@ -36,15 +36,15 @@ This Python module file contains a helper function for plotting model history (a
 <details>
 <summary>Jupyter Notebooks</summary>
 
-- ### [`Cleaning_Data.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Cleaning_Data.ipynb)
+### [`Cleaning_Data.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Cleaning_Data.ipynb)
 
 The Jupyter Notebook contains the code we used to clean the input data (speeches.csv) and set up the training, testing, and validation sets. In this notebook, we use the pre-trained BERT model and vectorizer (see BertSeqVect.py) to tokenize and vectorize the text data.
 
-- ### [`EDA.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/EDA.ipynb)
+### [`EDA.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/EDA.ipynb)
 
 This Jupyter Notebook contains code and visualizations from our exploratory data analysis.
 
-- ### [`Modeling.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Modeling.ipynb)
+### [`Modeling.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Modeling.ipynb)
 
 This Jupyter Notebook contains our code for the modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), and (3) the same second model but with Attention mechanisms. After developing these models, we use the third approach to begin exploring various ways to perform interpretable learning to discern how the model differentiates the two classes. Eventually, we will incorporate a fourth approach; a pre-trained transformer.
 </details>
@@ -52,35 +52,35 @@ This Jupyter Notebook contains our code for the modeling experiments. We experim
 <details>
 <summary>Data Files</summary>
 
-- ### [`Speeches_War_Clean.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/Speeches_War_Clean.csv)
+### [`Speeches_War_Clean.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/Speeches_War_Clean.csv)
 
 This file contains the cleaned data that we use for modeling.
 
-- ### [`presidential_speeches.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/presidential_speeches.csv)
+### [`presidential_speeches.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/presidential_speeches.csv)
 
 This file contains the original source data.
 
-- ### [`X_test.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_test.csv)
+### [`X_test.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_test.csv)
 
 This file contains the testing features (the vector representations of the input text).
 
-- ### [`X_train.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_train.csv)
+### [`X_train.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_train.csv)
 
 This file contains the training features (the vector representations of the input text).
 
-- ### [`X_val.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_val.csv)
+### [`X_val.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/X_val.csv)
 
 This file contains the validation features (the vector representations of the input text).
 
-- ### [`y_test.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_test.csv)
+### [`y_test.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_test.csv)
 
 This file contains the testing labels (binary response variable 'War').
 
-- ### [`y_train.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_train.csv)
+### [`y_train.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_train.csv)
 
 This file contains the training labels (binary response variable 'War').
 
-- ### [`y_val.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_val.csv)
+### [`y_val.csv`](https://github.com/WD-Scott/WordsofWar/blob/main/Data_Files/y_val.csv)
 
 This file contains the validation labels (binary response variable 'War').
 </details>
