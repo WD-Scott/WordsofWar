@@ -11,7 +11,7 @@
 
 In political discourse and geopolitical analysis, national leaders' words hold profound significance, often serving as harbingers of pivotal historical moments. From impassioned rallying cries to calls for caution, presidential speeches preceding major conflicts encapsulate the multifaceted dynamics of decision-making at the apex of governance. This project aims to use deep learning techniques to decode the subtle nuances and underlying patterns of US presidential rhetoric that may signal US involvement in major wars. While accurate classification is desirable, we seek to take a step further and identify discriminative features between the two classes (i.e., interpretable learning).
 
-Through an interdisciplinary fusion of machine learning and historical inquiry, we aspire to unearth insights into the predictive capacity of neural networks in discerning the preparatory rhetoric of US presidents preceding war. Indeed, as the venerable Prussian General and military theorist Carl von Clausewitz admonishes, "War is not merely an act of policy but a true political instrument, a continuation of political intercourse carried on with other means."[^1]
+Through an interdisciplinary fusion of machine learning and historical inquiry, we aspire to unearth insights into the predictive capacity of neural networks in discerning the preparatory rhetoric of US presidents preceding war. Indeed, as the venerable Prussian General and military theorist Carl von Clausewitz admonishes, "War is not merely an act of policy but a true political instrument, a continuation of political intercourse carried on with other means."<sup>1</sup>
 
 <details>
 <summary><h1 style="font-size: 22px;">Report</h1></summary>
@@ -33,6 +33,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
         * [Results — RNN with LSTM](results-rnn-with-lstm)
         * [Results — LSTM with Attention](results-lstm-with-attention)
    * [Next Steps](#next-steps)
+   * [Sources](#sources)
 <!--te-->
 
 # Introduction/Motivation
@@ -45,15 +46,15 @@ Moreover, this interdisciplinary approach provides valuable tools for policymake
 # Literature Review
 <a name="literature-review"></a>
 
-NLP has significantly improved in recent years, with techniques available today for handling progressively larger text documents. For longer texts, several studies show that Recurrent Neural Networks (RNN), particularly gated variants like Long Short-Term Memory (LSTM)[^2] and Gated Recurrent Unit (GRU)[^3], can capture patterns while retaining important contextual information.[^4][^5] However, LSTM and GRU structures are inefficient because they conduct recurrent operations at the token level, and research suggests these structures can suffer from vanishing gradients during backpropagation when used for longer sequences.[^6]
+NLP has significantly improved in recent years, with techniques available today for handling progressively larger text documents. For longer texts, several studies show that Recurrent Neural Networks (RNN), particularly gated variants like Long Short-Term Memory (LSTM)<sup>2</sup> and Gated Recurrent Unit (GRU)<sup>3</sup>, can capture patterns while retaining important contextual information.<sup>4,5</sup> However, LSTM and GRU structures are inefficient because they conduct recurrent operations at the token level, and research suggests these structures can suffer from vanishing gradients during backpropagation when used for longer sequences.<sup>6</sup>
 
-Nevertheless, gated architectures are instrumental in capturing sequential dependencies in text data, yet their effectiveness in handling long-term dependencies relevant to long-text modeling tasks poses a challenge that researchers have addressed using attention mechanisms.[^7] While attention mechanisms play a crucial role in enhancing predictive accuracy and model interpretability, addressing the challenge of handling long-term dependencies in text modeling tasks has led researchers to explore transformer-based architectures as a solution.[^8]
+Nevertheless, gated architectures are instrumental in capturing sequential dependencies in text data, yet their effectiveness in handling long-term dependencies relevant to long-text modeling tasks poses a challenge that researchers have addressed using attention mechanisms.<sup>7</sup> While attention mechanisms play a crucial role in enhancing predictive accuracy and model interpretability, addressing the challenge of handling long-term dependencies in text modeling tasks has led researchers to explore transformer-based architectures as a solution.<sup>8</sup>
 
-Google's Bidirectional Encoder Representations from Transformers (BERT)[^9] is one example of such a model, but myriad transformer-based architectures have emerged since Google released BERT. Despite impressive performance on a wide range of NLP tasks, these models still impose a length limitation on each input sequence, which most longer text documents far exceed. BERT's self-attention mechanism, for example, can process a maximum of 512 tokens. This requires careful preprocessing to circumvent maximum sequence length limitations; for example, researchers have explored employing truncation, chunking, etc.[^10] Other newer approaches, like BigBird and Longformer, use sparse attention mechanisms with larger maximum token limits, and others explore fine-tuning BERT to work with longer text data, including ChunkBERT and BERT For Longer Texts (BELT).[^11][^12]
+Google's Bidirectional Encoder Representations from Transformers (BERT)<sup>9</sup> is one example of such a model, but myriad transformer-based architectures have emerged since Google released BERT. Despite impressive performance on a wide range of NLP tasks, these models still impose a length limitation on each input sequence, which most longer text documents far exceed. BERT's self-attention mechanism, for example, can process a maximum of 512 tokens. This requires careful preprocessing to circumvent maximum sequence length limitations; for example, researchers have explored employing truncation, chunking, etc.<sup>10</sup> Other newer approaches, like BigBird and Longformer, use sparse attention mechanisms with larger maximum token limits, and others explore fine-tuning BERT to work with longer text data, including ChunkBERT and BERT For Longer Texts (BELT).<sup>11,12</sup>
 
-Research has shown that the structure of the BERT-based gated approaches, which use a fully connected encoding unit and apply the gate mechanism to update state memory, are computationally inefficient given the quadratic time complexity of applying self-attention in long-text modeling. A recent paper proposes addressing these issues using what the authors refer to as a Recurrent Attention Network (RAN).[^13] The RAN model uses positional multi-head self-attention on local windows for dependency extraction and employs a Global Perception Cell (GPC) vector to propagate information across windows, concatenated with tokens in subsequent windows. The GPC vector acts as a window-level contextual representation and maintains long-distance memory, enhancing local and global understanding. Additionally, a memory review mechanism allows the GPC vector from the last window to serve as a document-level representation for classification tasks.
+Research has shown that the structure of the BERT-based gated approaches, which use a fully connected encoding unit and apply the gate mechanism to update state memory, are computationally inefficient given the quadratic time complexity of applying self-attention in long-text modeling. A recent paper proposes addressing these issues using what the authors refer to as a Recurrent Attention Network (RAN).<sup>13</sup> The RAN model uses positional multi-head self-attention on local windows for dependency extraction and employs a Global Perception Cell (GPC) vector to propagate information across windows, concatenated with tokens in subsequent windows. The GPC vector acts as a window-level contextual representation and maintains long-distance memory, enhancing local and global understanding. Additionally, a memory review mechanism allows the GPC vector from the last window to serve as a document-level representation for classification tasks.
 
-When it comes to interpretable learning, however, recent research suggests this technique may not provide much in terms of interpretability.[^14] Researchers recently developed an approach called ProtoryNet, which makes predictions by finding the most similar prototype for each sentence in a sequence and feeding an RNN backbone with the proximity of each sentence of the corresponding active prototype. The RNN backbone then captures the temporal pattern of the prototypes, which the authors refer to as 'prototype trajectories.' These trajectories enable intuitive, find-grained interpretation of the RNN model's reasoning process.[^15]
+When it comes to interpretable learning, however, recent research suggests this technique may not provide much in terms of interpretability.<sup>14</sup> Researchers recently developed an approach called ProtoryNet, which makes predictions by finding the most similar prototype for each sentence in a sequence and feeding an RNN backbone with the proximity of each sentence of the corresponding active prototype. The RNN backbone then captures the temporal pattern of the prototypes, which the authors refer to as 'prototype trajectories.' These trajectories enable intuitive, find-grained interpretation of the RNN model's reasoning process.<sup>15</sup>
 
 # Methods
 <a name="methods"></a>
@@ -61,7 +62,7 @@ When it comes to interpretable learning, however, recent research suggests this 
 ## Dataset
 <a name="dataset"></a>
 
-The data for this project comes from Joseph Lilleberg's Kaggle dataset, "United States Presidential Speeches," which Lilleberg scraped from The Miller Center at the University of Virginia.[^16] We added a column to the Kaggle dataset that represents our binary categorical response variable (War), indicating whether the US entered a major war within one year of the president's speech. If the US entered a major war within one year of the president's speech, then the observation's value for the War variable is 1; if the US did not enter a major war within one year of the president's speech, that observation gets a 0 value for the War variable. We derived wars' start dates from the US Congressional Research Service.[^17] 
+The data for this project comes from Joseph Lilleberg's Kaggle dataset, "United States Presidential Speeches," which Lilleberg scraped from The Miller Center at the University of Virginia.<sup>16</sup> We added a column to the Kaggle dataset that represents our binary categorical response variable (War), indicating whether the US entered a major war within one year of the president's speech. If the US entered a major war within one year of the president's speech, then the observation's value for the War variable is 1; if the US did not enter a major war within one year of the president's speech, that observation gets a 0 value for the War variable. We derived wars' start dates from the US Congressional Research Service.<sup>17</sup> 
 
 This dataset provides a robust framework for a comprehensive exploration of presidential rhetoric. Including the 'Party' variable allows us to examine whether patterns exist in political affiliation and the content and tone of presidential speeches.
 
@@ -69,7 +70,7 @@ We perform some slight cleaning and preprocessing to set up the data for modelin
 
 Several transcripts end with the president's signature; we remove the signature text from the transcripts column given that the president is identifiable from the president column and that text is not important for our modeling purposes. The transcripts also contain instances of long integers and floating point numbers when a president describes various treasury and debt statistics, for example. We remove floating point numbers and integers from the transcripts. Additionally, we convert the transcripts to lowercase and remove punctuation.
 
-After cleaning the data and adding our response variable, the dataset contains 964 observations and exhibits significant class imbalance. There are 883 observations classified as War = 0 and 81 observations classified as War = 1; roughly 92% of the speeches were not delivered within one year of the US entering a major war. We use the Synthetic Minority Over-sampling Technique (SMOTE) to balance the classes, and, as the authors suggest, we combine SMOTE with random undersampling of the majority class.[^18] We combine these transformations into a single pipeline.
+After cleaning the data and adding our response variable, the dataset contains 964 observations and exhibits significant class imbalance. There are 883 observations classified as War = 0 and 81 observations classified as War = 1; roughly 92% of the speeches were not delivered within one year of the US entering a major war. We use the Synthetic Minority Over-sampling Technique (SMOTE) to balance the classes, and, as the authors suggest, we combine SMOTE with random undersampling of the majority class.<sup>18</sup> We combine these transformations into a single pipeline.
 
 ## Modeling
 <a name="modeling"></a>
@@ -124,28 +125,47 @@ In parallel, we will explore interpretative learning techniques/methodologies to
 
 We plan to explore the extracted attention weights from our third model via visualization and analyzing summary statistics (e.g., the mean of the attention weights for each class). We can also perform some basic statistical tests to compare the attention weights between the two classes. Additional approaches we're considering include using the pre-trained ProtoryNet model, Local Interpretable Model-agnostic Explanations (LIME), and Shapley Additive exPlanations (SHAP).
 
-[^1]: von Clausewitz, C. (1997). On War (J. J. Graham, Trans.). Wordsworth Editions.
-[^2]: Sepp Hochreiter and Jurgen Schmidhuber. (1997). Long Short-Term Memory. Neural Computation 9, no. 8, pp. 1735-1780. See also Hasim Sak et al. (2014). Long Short-Term Memory Based Recurrent Neural Network Architectures for Large Vocabulary Speech Recognition. ArXiv 1402.1128v1.
-[^3]: Kyunghyun Cho et al. (2014). Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, pp. 1724-1734.
-[^4]: Zhou, Chunting, Chonglin Sun, Zhiyuan Liu and F. Lau. (2015). A C-LSTM Neural Network for Text Classification. ArXiv abs/1511.08630.
-[^5]: Hassan, Abdalraouf and Ausif Mahmood. (2018). Convolutional Recurrent Deep Learning Model for Sentence Classification. IEEE Access 6, pp. 13949-13957.
-[^6]: DeLesley Hutchins et al. (2022). Block-Recurrent Transformers. ArXiv 2203.07852v3.
-[^7]: Dzmitry Bahdanau et al. (2014). Neural Machine Translation by Jointly Learning to Align and Translate. ArXiv 1409.0473.
-[^8]: Ashish Vaswani et al. (2017). Attention is All You Need. Proceedings of the 31st International Conference on Neural Information Processing Systems, pp. 6000-6010.
-[^9]: Jacob Devlin et al. (2019). BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding. Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies 1.
-[^10]: Zican Dong et al. (2022). A Survey on Long Text Modeling with Transformers. ArXiv 2302.14502v1. See also Park et al. (2022). Efficient Classification of Long Documents Using Transformers. ArXiv 2203.11258v1.
-[^11]: Aman Jaiswal and Evangelos Milios. (2023). Breaking the Token Barrier: Chunking and Convolution for Efficient Longer Text Classification with BERT. ArXiv 2310.2055av1.
-[^12]: Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts Part 1. MIM AI. https://www.mim.ai/fine-tuning-bert-model-for-arbitrarily-long-texts-part-1/. See also Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts, Part 2. MIM AI. https://www.mim.ai/fine-tuning-bert-model-for-arbitrarily-long-texts-part-2/. For technical documentation, see Michal Brzozowski and Marek Wachnicki. (2023). Welcome to BELT (BERT For Longer Texts)'s documentation. MIM AI. https://mim-solutions.github.io/bert_for_longer_texts/. 
-[^13]: Xianming Li et al. (2023). Recurrent Attention Networks for Long-text Modeling. Findings of the Association for Computational Linguistics (ACL), pp. 3006-3019.
-[^14]: Sarthak Jain and Byron C. Wallace. (2019). Attention is not Explanation. ArXiv 1902.10186v3.
-[^15]: Dat Hong et al. (2023). ProtoryNet - Interpretable Text Classification Via Prototype Trajectories. Journal of Machine Learning Research 24, pp. 1-39.
-[^16]: Lilleberg, J. (2020). United States presidential speeches. Kaggle. https://www.kaggle.com/datasets/littleotter/united-states-presidential-speeches; Data scraped from The Miller Center at the University of Virginia, https://millercenter.org/the-presidency/presidential-speeches.
-[^17]: Barbara Salazar Torreon and Carly A. Miller, US Congressional Research Service. (2024). U.S. Periods of War and Dates of Recent Conflicts, available at https://sgp.fas.org/crs/natsec/RS21405.pdf.
-[^18]: Nitesh V. Chawla et al. (2002). SMOTE: Synthetic Minority Over-sampling Technique. Journal of Artificial Intelligence 16, pp. 321-357.
+<details>
+<summary><h2 style="font-size: 18px;">Sources</h2></summary>
+<a name="sources"></a>
 
+[1]: von Clausewitz, C. (1997). On War (J. J. Graham, Trans.). Wordsworth Editions.
 
+[2]: Sepp Hochreiter and Jurgen Schmidhuber. (1997). Long Short-Term Memory. Neural Computation 9, no. 8, pp. 1735-1780. See also Hasim Sak et al. (2014). Long Short-Term Memory Based Recurrent Neural Network Architectures for Large Vocabulary Speech Recognition. ArXiv 1402.1128v1.
 
+[3]: Kyunghyun Cho et al. (2014). Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, pp. 1724-1734.
 
+[4]: Zhou, Chunting, Chonglin Sun, Zhiyuan Liu and F. Lau. (2015). A C-LSTM Neural Network for Text Classification. ArXiv abs/1511.08630.
+
+[5]: Hassan, Abdalraouf and Ausif Mahmood. (2018). Convolutional Recurrent Deep Learning Model for Sentence Classification. IEEE Access 6, pp. 13949-13957.
+
+[6]: DeLesley Hutchins et al. (2022). Block-Recurrent Transformers. ArXiv 2203.07852v3.
+
+[7]: Dzmitry Bahdanau et al. (2014). Neural Machine Translation by Jointly Learning to Align and Translate. ArXiv 1409.0473.
+
+[8]: Ashish Vaswani et al. (2017). Attention is All You Need. Proceedings of the 31st International Conference on Neural Information Processing Systems, pp. 6000-6010.
+
+[9]: Jacob Devlin et al. (2019). BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding. Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Tchnologies 1.
+
+[10]: Zican Dong et al. (2022). A Survey on Long Text Modeling with Transformers. ArXiv 2302.14502v1. See also Park et al. (2022). Efficient Classification of Long Documents Using Transformers. ArXiv 2203.11258v1.
+
+[11]: Aman Jaiswal and Evangelos Milios. (2023). Breaking the Token Barrier: Chunking and Convolution for Efficient Longer Text Classification with BERT. ArXiv 2310.2055av1.
+
+[12]: Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts Part 1. MIM AI. https://www.mim.ai/fine-tuning-bert-model-for-arbitrarily-long-texts-part-1/. See also Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts, Part 2. MIM AI. https://www.mim.ai/fine-tuning-bert-model-for-arbitrarily-long-texts-part-2/. For technical documentation, see Michal Brzozowski and Marek Wachnicki. (2023). Welcome to BELT (BERT For Longer Texts)'s documentation. MIM AI. https://mim-solutions.github.io/bert_for_longer_texts/. 
+
+[13]: Xianming Li et al. (2023). Recurrent Attention Networks for Long-text Modeling. Findings of the Association for Computational Linguistics (ACL), pp. 3006-3019.
+
+[14]: Sarthak Jain and Byron C. Wallace. (2019). Attention is not Explanation. ArXiv 1902.10186v3.
+
+[15]: Dat Hong et al. (2023). ProtoryNet - Interpretable Text Classification Via Prototype Trajectories. Journal of Machine Learning Research 24, pp. 1-39.
+
+[16]: Lilleberg, J. (2020). United States presidential speeches. Kaggle. https://www.kaggle.com/datasets/littleotter/united-states-presidential-speeches; Data scraped from The Miller Center at the University of Virginia, https://millercenter.org/the-presidency/presidential-speeches.
+
+[17]: Barbara Salazar Torreon and Carly A. Miller, US Congressional Research Service. (2024). U.S. Periods of War and Dates of Recent Conflicts, available at https://sgp.fas.org/crs/natsec/RS21405.pdf.
+
+[18]: Nitesh V. Chawla et al. (2002). SMOTE: Synthetic Minority Over-sampling Technique. Journal of Artificial Intelligence 16, pp. 321-357.
+
+</details>
 </details>
 <details>
 <summary><h1 style="font-size: 22px;">Manifest</h1></summary>
