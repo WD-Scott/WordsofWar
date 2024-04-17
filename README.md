@@ -24,14 +24,10 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
    * [Methods](#methods)
    * [Literature Review](#literature-review)
       * [Datset](#dataset)
-      * [Modeling](#modeling)
+      * [Modeling Experiments](#modeling-experiments)
         * [MLP](#mlp)
         * [RNN with LSTM](#rnn-with-lstm)
         * [LSTM with Attention](#lstm-with-attention)
-      * [Experiments](#experiments)
-        * [Results — MLP](#results-mlp)
-        * [Results — RNN with LSTM](results-rnn-with-lstm)
-        * [Results — LSTM with Attention](results-lstm-with-attention)
    * [Next Steps](#next-steps)
    * [Sources](#sources)
 <!--te-->
@@ -72,8 +68,8 @@ Several transcripts end with the president's signature; we remove the signature 
 
 After cleaning the data and adding our response variable, the dataset contains 964 observations and exhibits significant class imbalance. There are 883 observations classified as War = 0 and 81 observations classified as War = 1; roughly 92% of the speeches were not delivered within one year of the US entering a major war. We use the Synthetic Minority Over-sampling Technique (SMOTE) to balance the classes, and, as the authors suggest, we combine SMOTE with random undersampling of the majority class.<sup>18</sup> We combine these transformations into a single pipeline.
 
-## Modeling
-<a name="modeling"></a>
+## Modeling Experiments
+<a name="modeling-experiments"></a>
 
 We built a custom Python class that leverages a pre-trained BERT model to tokenize and vectorize the raw text data, converting the speeches into fixed-length vectors that we pass as inputs to our models.
 
@@ -84,37 +80,40 @@ While accurate classification is desirable, we seek to take a step further and i
 ### MLP
 <a name="mlp"></a>
 
-For our first experiment, we built an MLP consisting of two dense hidden layers with ReLU activation followed by dropout regularization and an output layer with a sigmoid activation function. We apply L2 regularization of 0.01 to the kernel weights in all dense layers to prevent overfitting. When compiling the model, we use the Stochastic Gradient Descent optimizer with a learning rate of 0.001 and Nesterov momentum of 0.99. 
+For our first experiment, we built an MLP consisting of two dense hidden layers with ReLU activation followed by dropout regularization and an output layer with a sigmoid activation function. We apply L2 regularization of 0.01 to the kernel weights in all dense layers to prevent overfitting. When compiling the model, we use the Stochastic Gradient Descent optimizer with a learning rate of 0.001 and Nesterov momentum of 0.99.
+
+This first model achieves 81.51% training accuracy and 79.83% validation accuracy by epoch ten, with the training and validation losses steadily decreasing to 2.16 and 2.07, respectively. On the test set, the AUC-ROC is 86.70, and the F1-Score is 76.19.
+
+<div align="center">
+    <img src="images/mlp.png">
+</div>
+<p align="center">
 
 ### RNN with LSTM
 <a name="rnn-with-lstm"></a>
 
 In our second approach, we reshape the input data to include a timestep dimension before it's fed into the LSTM layer, allowing the model to effectively capture temporal dependencies in the input data. With 128 units, the LSTM layer utilizes hyperbolic tangent activation, Glorot uniform, and orthogonal initializers, along with dropout of 0.1 and recurrent dropout of 0.1 for regularization. Next comes a densely connected layer consisting of 64 units with ReLU activation, He normal initialization, and L2 regularization of 0.1. We added a dropout layer to apply further regularization and mitigate overfitting. Given that we're performing binary classification, the final layer is a dense output layer with a sigmoid activation function. We apply L2 regularization to the kernel weights in both dense layers to further prevent overfitting. When compiling the model, we use the Adam optimizer with a learning rate of 0.001.
 
+This model achieves 85.40% training accuracy and 83.19% validation accuracy by the fifth epoch, achieving 95.27% training accuracy and 92.44% validation accuracy by epoch ten. The training and validation loss are 0.2889 and 0.3112 by the tenth epoch. On the test set, the AUC-ROC is 95.56, and the F1-Score is 91.52.
+
+<div align="center">
+    <img src="images/rnn_lstm.png">
+</div>
+<p align="center">
+
 ### LSTM with Attention
 <a name="lstm-with-attention"></a>
 
 This model architecture is the same as the previous model except that we include a custom attention layer between the LSTM layer and the first dense layer to dynamically weigh the input sequence elements based on their importance. As with the second model, we use the Adam optimizer with a learning rate of 0.001.
 
-## Experiments
-<a name="experiments"></a>
-
-### Results — MLP
-<a name="results-mlp"></a>
-
-This first model achieves 81.51% training accuracy and 79.83% validation accuracy by epoch ten, with the training and validation losses steadily decreasing to 2.16 and 2.07, respectively. On the test set, the AUC-ROC is 86.70, and the F1-Score is 76.19.
-
-### Results — RNN with LSTM
-<a name="results-rnn-with-lstm"></a>
-
-This model achieves 85.40% training accuracy and 83.19% validation accuracy by the fifth epoch, achieving 95.27% training accuracy and 92.44% validation accuracy by epoch ten. The training and validation loss are 0.2889 and 0.3112 by the tenth epoch. On the test set, the AUC-ROC is 95.56, and the F1-Score is 91.52.
-
-### Results — LSTM with Attention
-<a name="results-lstm-with-attention"></a>
-
 This model achieves 86.13% training accuracy and 87.39% validation accuracy by the fifth epoch, eventually achieving 95.80% training accuracy and 89.92% validation accuracy by epoch ten. The training and validation loss are 0.2842 and 0.3447 at the tenth epoch. On the test set, the AUC-ROC is 94.46, and the F1-Score is 88.52.
 
 After defining, compiling, and training this model, we create another model called using the Model class, specifying the same inputs as the LSTM model with Attention but setting the output to that of the attention layer. This allows us to extract the attention weights, providing insights into how the attention mechanism weighs different parts of the input sequence. The Next Steps section describes how we plan to use the extracted attention weights for interpretable learning.
+
+<div align="center">
+    <img src="images/lstm_attn.png">
+</div>
+<p align="center">
 
 # Next Steps
 <a name="next-steps"></a>
