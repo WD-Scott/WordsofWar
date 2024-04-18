@@ -28,6 +28,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
         * [MLP](#mlp)
         * [RNN with LSTM](#rnn-with-lstm)
         * [LSTM with Attention](#lstm-with-attention)
+      * [Test Performance](#test-performance)
    * [Next Steps](#next-steps)
    * [Sources](#sources)
 <!--te-->
@@ -114,6 +115,15 @@ After defining, compiling, and training this model, we create another model call
     <img src="images/lstm_attn.png">
 </div>
 <p align="center">
+
+## Test Performance
+<a name="test-performance"></a>
+
+<div align="center">
+    <img src="images/model_comp.png">
+</div>
+<p align="center">
+
 
 # Next Steps
 <a name="next-steps"></a>
