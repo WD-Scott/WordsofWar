@@ -29,7 +29,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
         * [RNN with LSTM](#rnn-with-lstm)
         * [LSTM with Attention](#lstm-with-attention)
       * [Test Performance](#test-performance)
-   * [Next Steps](#next-steps)
+   * [Conclusions](#conclusions)
    * [Sources](#sources)
 <!--te-->
 
@@ -125,14 +125,10 @@ After defining, compiling, and training this model, we create another model call
 <p align="center">
 
 
-# Next Steps
-<a name="next-steps"></a>
+# Conclusions
+<a name="conclusions"></a>
 
-Moving forward, we plan to try one additional model: a pre-trained transformer model. We're still determining which transformer to use and will explore several options, allowing computational efficiency and recorded performance on binary classification tasks to guide our decision. We encountered challenges when aligning the dimensions of our preprocessed data with the requirements of the transformer models we've been exploring. To address this, we may need to refine our data preprocessing to ensure compatibility with the selected transformer model or potentially leverage a unique preprocessing pipeline. This approach includes meticulous fine-tuning of the model, informed by best practices, to achieve optimal results. 
-
-In parallel, we will explore interpretative learning techniques/methodologies to determine if we can identify discriminative features between the two classes and gain insights into our models' decision-making processes. This will be adaptive and shaped by our ongoing challenges and insights to better understand patterns for classification. 
-
-We plan to explore the extracted attention weights from our third model via visualization and analyzing summary statistics (e.g., the mean of the attention weights for each class). We can also perform some basic statistical tests to compare the attention weights between the two classes. Additional approaches we're considering include using the pre-trained ProtoryNet model, Local Interpretable Model-agnostic Explanations (LIME), and Shapley Additive exPlanations (SHAP).
+TBD
 
 <details>
 <summary><h2 style="font-size: 18px;">Sources</h2></summary>
