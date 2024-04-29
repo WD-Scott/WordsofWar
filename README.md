@@ -212,7 +212,7 @@ This Jupyter Notebook contains code and visualizations from our exploratory data
 
 ### [`Modeling.ipynb`](https://github.com/WD-Scott/WordsofWar/blob/main/Jupyter_Notebooks/Modeling.ipynb)
 
-This Jupyter Notebook contains our code for the modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), and (3) the same second model but with Attention mechanisms. After developing these models, we use the third approach to begin exploring various ways to perform interpretable learning to discern how the model differentiates the two classes. Eventually, we will incorporate a fourth approach; a pre-trained transformer.
+This Jupyter Notebook contains our code for the modeling experiments. We experiment with three models: (1) MLP, (2) gated RNN (LSTM), (3) the same second model but with Attention mechanisms, and (4) a pre-trained BERT model. After developing these models, we use the third approach to begin exploring various ways to perform interpretable learning to discern how the model differentiates the two classes.
 </details>
 <br>
 <details>
