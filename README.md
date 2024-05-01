@@ -42,8 +42,7 @@ Moreover, this interdisciplinary approach provides valuable tools for policymake
 # Methods
 <a name="methods"></a>
 
-The data for this project comes from Kaggle, but the author scraped the data from The Miller Center at the University of Virginia.<sup>2</sup> We added a column to the dataset
-that represents our binary categorical response variable (War), indicating whether the US entered a major war within one year of the president’s speech. We encode an observation’s value for the War variable as 1 if the US entered a major war within one year of the president’s speech; otherwise, we encode the observation’s value for the War variable as 0. We derived wars’ start dates from the US Congressional Research Service.<sup>3</sup>
+The data for this project comes from Kaggle, but the author scraped the data from The Miller Center at the University of Virginia.<sup>2</sup> We added a column to the dataset that represents our binary categorical response variable (War), indicating whether the US entered a major war within one year of the president’s speech. We encode an observation’s value for the War variable as 1 if the US entered a major war within one year of the president’s speech; otherwise, we encode the observation’s value for the War variable as 0. We derived wars’ start dates from the US Congressional Research Service.<sup>3</sup>
 
 We perform some slight cleaning and preprocessing to set up the data for modeling. First, we checked for null values and found one missing transcript for a speech delivered by Thomas Jefferson on Nov. 8, 1808; we found the transcript via the Miller Center and added it to the dataset. Next, because the first war we consider (First Barbary War) started in 1801, we filter the dataset to speeches dated after 1800. 
 
@@ -152,7 +151,7 @@ In our first approach, we extract and analyze the attention weights from our thi
 
 The x-axis of the distribution plot above represents mean attention weights, which indicate the average importance that the attention mechanism assigned to different pieces of the input sequences. The y-axis represents the frequency of sequences with a particular mean attention weight. The plot allows us to compare the mean attention weight distributions between the two classes; we observe some overlap but reasonably clear separation between the distributions of mean attention weights for the two classes, suggesting that the attention mechanism effectively captures differences between the classes.
 
-For our second approach, we use the Local Interpretable Modeling-agnostic Explanations (LIME) package to help explain predictions from our second model<sup>6</sup>. Approximating our complex model via a local linear explanation model enables us to analyze and visualize the influence of individual features on prediction outcomes, helping identify key attributes that distinguish between classes and providing a basis for deeper analysis and justification of the model’s decisions.
+For our second approach, we use the Local Interpretable Modeling-agnostic Explanations (LIME) package to help explain predictions from our second model.<sup>6</sup> Approximating our complex model via a local linear explanation model enables us to analyze and visualize the influence of individual features on prediction outcomes, helping identify key attributes that distinguish between classes and providing a basis for deeper analysis and justification of the model’s decisions.
 
 <div align="center">
     <img src="images/lime.png">
@@ -161,15 +160,14 @@ For our second approach, we use the Local Interpretable Modeling-agnostic Explan
 
 The chart above shows the dimensions that contributed most to a single prediction from the model; the bars indicate magnitude and whether the feature influenced the model toward or away from a prediction of War = 1. Investigating local explanations can provide insight into whether or not the model’s decisions align with human decision-making.
 
-The third way we add interpretability is by employing the SHapley Additive exPlanations (SHAP) package to visualize feature importance values from the second model <sup>7</sup>. In contrast with LIME, SHAP values explain how features affect a model globally.
+The third way we add interpretability is by employing the SHapley Additive exPlanations (SHAP) package to visualize feature importance values from the second model.<sup>7</sup> In contrast with LIME, SHAP values explain how features affect a model globally.
 
 <div align="center">
     <img src="images/shap.png">
 </div>
 <p align="center">
 
-The visualization illustrates the most influential features SHAP identified for our second model, ranked by the largest mean magnitude associated with war predictions. By
-comparing SHAP with LIME, we observe that the key features influencing local predictions often differ significantly from those impacting global outcomes. This contrast highlights the unique insights each method brings to model interpretability.
+The visualization illustrates the most influential features SHAP identified for our second model, ranked by the largest mean magnitude associated with war predictions. By comparing SHAP with LIME, we observe that the key features influencing local predictions often differ significantly from those impacting global outcomes. This contrast highlights the unique insights each method brings to model interpretability.
 
 # Conclusions
 <a name="conclusions"></a>
@@ -216,9 +214,7 @@ If we were to spend more time and expand our analysis, we would leverage the Par
 
 [11]: Xianming Li et al. (2023). Recurrent Attention Networks for Long-text Modeling. Findings of the Association for Computational Linguistics (ACL), pp. 3006-3019.
 
-[12]: Sarthak Jain and Byron C. Wallace. (2019). Attention is not Explanation. ArXiv 1902.10186v3.
-
-[13]: Dat Hong et al. (2023). ProtoryNet - Interpretable Text Classification Via Prototype Trajectories. Journal of Machine Learning Research 24, pp. 1-39.
+[12]: Dat Hong et al. (2023). ProtoryNet - Interpretable Text Classification Via Prototype Trajectories. Journal of Machine Learning Research 24, pp. 1-39.
 
 </details>
 </details>
