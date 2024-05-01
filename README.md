@@ -32,7 +32,7 @@ Through an interdisciplinary fusion of machine learning and historical inquiry, 
    * [Sources](#sources)
 <!--te-->
 
-# Motivation
+# Introduction
 <a name="introduction"></a>
 
 We aim to shed light on the interplay between the verbiage of national leaders and the inexorable currents of history that they set in motion. In addition to probing the efficacy of deep learning and natural language processing (NLP) while navigating the challenges inherent in the analysis of protracted textual corpora, we endeavor to examine how presidential rhetoric shapes, reflects and occasionally catalyzes the nation’s trajectory toward pivotal global events. We aim to gauge the impact of leaders’ orations on national decisions and international relations, furnishing novel insights and fresh perspectives on matters of global import.
