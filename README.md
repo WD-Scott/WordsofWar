@@ -196,18 +196,30 @@ If we were to spend more time and expand our analysis, we would leverage the Par
 <a name="sources"></a>
 
 [1]: von Clausewitz, C. (1997). On War (J. J. Graham, Trans.). Wordsworth Editions.
+
 [2]: Lilleberg, J. (2020). United States presidential speeches. Kaggle. https://www.kaggle.com/datasets/littleotter/united-states-presidential-speeches. Data scraped from The Miller Center at the University of Virginia, https://millercenter.org/the-presidency/presidential-speeches.
+
 [3]: Barbara Salazar Torreon and Carly A. Miller, US Congressional Research Service. (2024). U.S. Periods of War and Dates of Recent Conflicts, available at https://sgp.fas.org/crs/natsec/RS21405.pdf.
+
 [4]: Nitesh V. Chawla et al., “SMOTE: Synthetic Minority Over-sampling Technique,” Journal of Artificial Intelligence 16 (2002) pp. 321-357.
+
 [5]: Jacob Devlin et al. (2019). BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding. Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies 1.
+
 [6]: Riberio et al., Why Should I Trust You?: Explaining the Predictions of Any Classifier, Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (2016), pp. 1135-1144.
+
 [7]: Scott M. Lundberg and Su Lee. (2017). A Unified Approach to Interpreting Model Predictions. In I. Guyon & U. V. Luxburg & S. Bengio & H. Wallach & R. Fergus & S. Vishwanathan & R. Garnett (Eds.), Advances in Neural Information Processing Systems (pp. 4765-4774). Curran Associates, Inc.
+
 [8]: Zican Dong et al. (2022). A Survey on Long Text Modeling with Transformers. ArXiv 2302.14502v1. See also Park et al. (2022). Efficient Classification of Long Documents Using Transformers. ArXiv
 2203.11258v1.
+
 [9]: Aman Jaiswal and Evangelos Milios. (2023). Breaking the Token Barrier: Chunking and Convolution for Efficient Longer Text Classification with BERT. ArXiv 2310.2055av1.
+
 [10]: Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts Part 1. MIM AI. See also Michal Brzozowski. (2023). Fine-tuning BERT model for arbitrarily long texts, Part 2. MIM AI. For technical documentation, see Michal Brzozowski and Marek Wachnicki. (2023). Welcome to BELT (BERT For Longer Text)’s documentation. MIM AI.
+
 [11]: Xianming Li et al. (2023). Recurrent Attention Networks for Long-text Modeling. Findings of the Association for Computational Linguistics (ACL), pp. 3006-3019.
+
 [12]: Sarthak Jain and Byron C. Wallace. (2019). Attention is not Explanation. ArXiv 1902.10186v3.
+
 [13]: Dat Hong et al. (2023). ProtoryNet - Interpretable Text Classification Via Prototype Trajectories. Journal of Machine Learning Research 24, pp. 1-39.
 
 </details>
