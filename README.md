@@ -112,7 +112,7 @@ Adding the attention layer seems to have improved performance compared to the pr
 
 The fourth model, fine-tuned on our dataset, utilizes self-attention mechanisms to process and analyze text segments in relation to their broader context within each speech. In training this model, we switch from the binary cross-entropy loss function to sparse categorical cross-entropy and use the Adam optimizer, specifying several hyperparameter values:
 
-* learning rate = 3e-8
+* learning rate = 3e-7
 * β1 = 0.9
 * β2 = 0.999
 * ε = 1e-08
