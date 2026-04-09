@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files (see README for download/regeneration instructions)
+Data_Files/*.csv
+
+# Model checkpoints and weights
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+saved_models/
+
+# NLTK data
+nltk_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.venv/
+venv/

@@ -1,85 +1,74 @@
+"""
+BERT sequence vectorizer for converting text into fixed-length embeddings.
+
+Wraps HuggingFace's ``bert-base-uncased`` (by default) to produce a single
+768-dimensional vector per input sentence, suitable for downstream classification.
+"""
+
 import torch
 import numpy as np
-import transformers
 from transformers import BertTokenizer, BertModel
 
 
 class BertSequenceVectorizer:
     """
-    BERT (Bidirectional Encoder Representations from Transformers) Sequence Vectorizer.
+    Vectorize text sequences using a pre-trained BERT model.
 
-    This class provides methods to vectorize sequences using a BERT model.
+    Tokenizes input text, passes it through BERT, and returns the ``[CLS]``
+    token embedding as a fixed-length representation of the sequence.
 
-    Parameters:
-    ----------
-    None
+    Args:
+        model_name: HuggingFace model identifier (default: ``'bert-base-uncased'``).
+        max_len: Maximum token length for input sequences (default: 256).
+            Longer sequences are truncated; shorter ones are padded.
 
     Attributes:
-    ----------
-    device : str
-        Device type on which the model is running ('cuda' or 'cpu').
-    model_name : str
-        Name of the BERT model used for vectorization.
-    tokenizer : transformers.BertTokenizer
-        Tokenizer object for BERT.
-    bert_model : transformers.BertModel
-        Pretrained BERT model.
-    max_len : int
-        Maximum length of the input sequences.
-
-    Methods:
-    -------
-    vectorize(sentence: str) -> np.array:
-        Vectorizes the input sentence using BERT.
-
+        device: ``'cuda'`` if a GPU is available, otherwise ``'cpu'``.
+        tokenizer: Tokenizer instance for the specified model.
+        bert_model: Pre-trained BERT encoder.
     """
 
-    def __init__(self):
-        """
-        Initialize BertSequenceVectorizer object.
+    def __init__(self, model_name: str = "bert-base-uncased", max_len: int = 256) -> None:
+        self.device: str = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model_name = model_name
+        self.max_len = max_len
 
-        This initializes the BERT sequence vectorizer with default parameters and loads the BERT model.
-        """
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        self.model_name = 'bert-base-uncased'
-        self.tokenizer = BertTokenizer.from_pretrained(self.model_name)
-        self.bert_model = transformers.BertModel.from_pretrained(self.model_name)
-        self.bert_model = self.bert_model.to(self.device)
-        self.max_len = 256
+        try:
+            self.tokenizer = BertTokenizer.from_pretrained(self.model_name)
+            self.bert_model = BertModel.from_pretrained(self.model_name)
+        except OSError as e:
+            raise RuntimeError(
+                f"Failed to load model '{self.model_name}'. Ensure you have "
+                f"internet access or the model is cached locally."
+            ) from e
 
-    def vectorize(self, sentence: str) -> np.array:
-        """
-        Vectorize the input sentence using BERT.
+        self.bert_model = self.bert_model.to(self.device)  # type: ignore[arg-type]
 
-        Parameters:
-        ----------
-        sentence : str
-            Input sentence to be vectorized.
+    def vectorize(self, sentence: str) -> np.ndarray:
+        """
+        Convert a sentence into a BERT ``[CLS]`` embedding.
+
+        Args:
+            sentence: Input text to vectorize.
 
         Returns:
-        -------
-        np.array
-            Vector representation of the input sentence.
+            1-D array of shape ``(768,)`` (for ``bert-base-uncased``).
         """
-        # Tokenize input
         inputs = self.tokenizer.encode_plus(
             sentence,
             add_special_tokens=True,
-            return_tensors='pt',
+            return_tensors="pt",
             max_length=self.max_len,
-            padding='max_length',
-            truncation=True
+            padding="max_length",
+            truncation=True,
         )
-        inputs_tensor = inputs['input_ids'].to(self.device)
-        masks_tensor = inputs['attention_mask'].to(self.device)
+        inputs_tensor = inputs["input_ids"].to(self.device)
+        masks_tensor = inputs["attention_mask"].to(self.device)
 
-        # Get BERT output
         with torch.no_grad():
             bert_out = self.bert_model(inputs_tensor, attention_mask=masks_tensor)
 
-        seq_out, pooled_out = bert_out['last_hidden_state'], bert_out['pooler_output']
+        seq_out = bert_out["last_hidden_state"]
 
-        if torch.cuda.is_available():
-            return seq_out[0][0].cpu().detach().numpy()
-        else:
-            return seq_out[0][0].detach().numpy()
+        # .cpu() is a no-op when already on CPU
+        return seq_out[0][0].cpu().detach().numpy()
