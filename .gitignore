@@ -9,6 +9,7 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
+.virtual_documents/
 
 # Data files (see README for download/regeneration instructions)
 data/*.csv
