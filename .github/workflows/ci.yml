@@ -26,4 +26,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt -r requirements-dev.txt
-      - run: PYTHONPATH=src pytest tests/ -v --tb=short
+      - run: PYTHONPATH=src pytest tests/ -v --tb=short --cov=words_of_war --cov-report=term-missing --cov-fail-under=50

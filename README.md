@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Repo_Status%3A-Final_Version-blue?style=flat&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAC0AAAAiCAMAAAD8kqB9AAAClFBMVEUAAAD%2F%2F%2F%2FBYzTCysr2WxvyQRLnSibjUy3VZSLbQyvSjHHIjEX5%2F%2F%2F5%2B%2FvIz9D8%2F%2F%2F4WhryWRz3QBHxUR7ySh%2FxbBjsTiHwbxnnTCXVQiz96eTg4N%2Fd3dzL0tH0XDPFzc32SRv0UB%2F3WRr4XRn1SR32VBv1Uhz0TB71URz0QBDySh3%2FYAP4ZxT1YxnwXRz0ZxnvTh7vVR7yPhDxQhfrTB%2FcVCLfRSzUUCfdPCbLciPQOjLu8fHc5OXn5eT85uHj4uHY19bKt6%2F3WBv2Uhv0WS%2F1TSDyWjT0Sx33XBr3Vhv0Vxz3XRr3Xhr1Uhv0Ux30SRv0Whv3Yhn2Xhr0UhzzPg%2F2RBb0Tx7zPg%2FzPg7zUR33YxjyTh%2F7XgL6WQDxTh%2FwVB%2F3Pw%2FzPA3wTh7zYRv1aBntTCDxXhzrTx%2FwSh7oYCDxaxjuTiDmSyHsWR7rPxnoQiXnchrmehr%2B9%2FTs7%2FD%2B7unW2djQ19jm2dbHxcLKuLD3v6%2FJrKL1SRvvelv25ePBxML7aRfg7%2FbS5ezY7PDA1t32VBv2UBz0SR70QxT0QxT0QxT2VRv1VRz3Yhn1Sx34VRvyTB%2F1Sh71Rhj2Uhz2TBj3YRn3Yxn1RBb5ZBfxTB%2F2ZBn7Zgz4Zhj4QhPuWB30ZBrySR3yXhzvSyDvWRv3PxDvTR%2F0WRzyYhvyPQ32aRryahrvViDuYhnxQRPzbRrsRh%2FYXSPuchnrcxjRp5vqbEr5v6%2F0cU3wWDD849vQqqD3pI32n4b2moDfhmznlmTocVD0XjX5Vhrl5ubKtKvirZ%2FPpprTpZbWnI%2F8q3z2lnv4lHn5pXXwn27fhGrfgmjlkF%2F5klzmclPjcFD1bUn0Z0Ptd0H3bDb0VCr0WyT4WRn7YRf4PQvBMCeZAAAAs3RSTlMA%2FQj72VQnHBIPBgX%2B%2Fv78%2BKqajGI0LyolBv7%2B%2Fv79%2FPX09PTu287Cv7%2B1oqCTi394c1pONCIYFRINCv7%2B%2Fv7%2B%2Fv79%2Ffv39fHw7evp4uHS0M%2FMysXFwbq4s7Cwq6SimpGQgX59eHJoYFlRUElHRD8sGRX%2B%2Fv7%2B%2Fv7%2B%2Fv7%2B%2Fv38%2FPv6%2Bvn57u3p4%2BLd19bV0tLNzcrIwsC5trSnp6eioJ%2Bem5uVlZWRkIiDbmlcS0tEOTQjHZlkpy4AAAI7SURBVDjLYqAPyBHU0Y6NjZlvCuZxLp%2BtrR2jI5iOS7nWjX2nT1xQ5ARzuKdc3Xf%2BzDV%2Fdlyq2dt3NvHbqUhAzJ50vKWxzi0Pt1sSttRLM25bAWYbbXd0YDwVgcflEirH%2BHi2dpoBmVyhe%2BWtd7isBTLxGM4MNDyRQZKBdXtlKf%2FJCLzBwua%2BGWh4BzsDE8RoY%2FyhuGQLsz3%2F5USg0Y4yjHvCufCrZlPYLMuztYt9%2Bjk%2BXjs5Y0JRJAQ0nHFbiNthaaDRQD4RhlfdPsvHKyXHSjj%2BhfYz2xbVVtsw7tbkIqxaAmg4b3kFwmjChh%2BSgRhNGIi57iyTKS45YIRDHiAONMMvyjvw70Iz2hzOMs3kQDX8qI3UARRXc2duQJLXW4MsN%2FdS864QJiQBUb1cZHnTeQvFETwTxSNXkFxdoCdoguZ2wwDdjXDOguvqcKMLkwOEOTG8mh%2FpoysOM7xGBMrapM8SnIM1aDL8PGat4waxJFPZIe7V9fZNlcQRklYiagKB%2BqLcEJ74yqlKqklmeGLGyjjSU3laimiB%2BCrAoryVwkTMgYGHUzHIUjMDr1sNPso3BeLZcKpjMmfisEwTzErRiQpUVurXmNgm0Dtjjn7WsuRCDqAMWvj1%2BAWxsHgcdPJUnRwnst6CwVIsQ1ij28vpoAALS5Ca6mIU1aujVaINklp9s%2FMtkEQ52fKCneMN4tzDDNGcsmiCsIZzGoYLcxXVhNW1mNCFLZb6q2MrILO1%2BmZKYPMorlBlIBcAACpxj1lvNSqgAAAAAElFTkSuQmCC&labelColor=%23232D4B&color=%23E57200) &nbsp; &nbsp; &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp; &nbsp; &nbsp;[![python](https://img.shields.io/badge/Python-3.11-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org) &nbsp; &nbsp; &nbsp;[![tensorflow](https://img.shields.io/badge/TensorFlow-2.15.0-FF6F00.svg?style=flat&logo=tensorflow)](https://www.tensorflow.org) &nbsp; &nbsp; &nbsp;[![arXiv](https://img.shields.io/badge/arXiv-2412.08868-b31b1b.svg)](https://arxiv.org/abs/2412.08868)
+![Static Badge](https://img.shields.io/badge/Repo_Status%3A-Final_Version-blue?style=flat&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAC0AAAAiCAMAAAD8kqB9AAAClFBMVEUAAAD%2F%2F%2F%2FBYzTCysr2WxvyQRLnSibjUy3VZSLbQyvSjHHIjEX5%2F%2F%2F5%2B%2FvIz9D8%2F%2F%2F4WhryWRz3QBHxUR7ySh%2FxbBjsTiHwbxnnTCXVQiz96eTg4N%2Fd3dzL0tH0XDPFzc32SRv0UB%2F3WRr4XRn1SR32VBv1Uhz0TB71URz0QBDySh3%2FYAP4ZxT1YxnwXRz0ZxnvTh7vVR7yPhDxQhfrTB%2FcVCLfRSzUUCfdPCbLciPQOjLu8fHc5OXn5eT85uHj4uHY19bKt6%2F3WBv2Uhv0WS%2F1TSDyWjT0Sx33XBr3Vhv0Vxz3XRr3Xhr1Uhv0Ux30SRv0Whv3Yhn2Xhr0UhzzPg%2F2RBb0Tx7zPg%2FzPg7zUR33YxjyTh%2F7XgL6WQDxTh%2FwVB%2F3Pw%2FzPA3wTh7zYRv1aBntTCDxXhzrTx%2FwSh7oYCDxaxjuTiDmSyHsWR7rPxnoQiXnchrmehr%2B9%2FTs7%2FD%2B7unW2djQ19jm2dbHxcLKuLD3v6%2FJrKL1SRvvelv25ePBxML7aRfg7%2FbS5ezY7PDA1t32VBv2UBz0SR70QxT0QxT0QxT2VRv1VRz3Yhn1Sx34VRvyTB%2F1Sh71Rhj2Uhz2TBj3YRn3Yxn1RBb5ZBfxTB%2F2ZBn7Zgz4Zhj4QhPuWB30ZBrySR3yXhzvSyDvWRv3PxDvTR%2F0WRzyYhvyPQ32aRryahrvViDuYhnxQRPzbRrsRh%2FYXSPuchnrcxjRp5vqbEr5v6%2F0cU3wWDD849vQqqD3pI32n4b2moDfhmznlmTocVD0XjX5Vhrl5ubKtKvirZ%2FPpprTpZbWnI%2F8q3z2lnv4lHn5pXXwn27fhGrfgmjlkF%2F5klzmclPjcFD1bUn0Z0Ptd0H3bDb0VCr0WyT4WRn7YRf4PQvBMCeZAAAAs3RSTlMA%2FQj72VQnHBIPBgX%2B%2Fv78%2BKqajGI0LyolBv7%2B%2Fv79%2FPX09PTu287Cv7%2B1oqCTi394c1pONCIYFRINCv7%2B%2Fv7%2B%2Fv79%2Ffv39fHw7evp4uHS0M%2FMysXFwbq4s7Cwq6SimpGQgX59eHJoYFlRUElHRD8sGRX%2B%2Fv7%2B%2Fv7%2B%2Fv7%2B%2Fv38%2FPv6%2Bvn57u3p4%2BLd19bV0tLNzcrIwsC5trSnp6eioJ%2Bem5uVlZWRkIiDbmlcS0tEOTQjHZlkpy4AAAI7SURBVDjLYqAPyBHU0Y6NjZlvCuZxLp%2BtrR2jI5iOS7nWjX2nT1xQ5ARzuKdc3Xf%2BzDV%2Fdlyq2dt3NvHbqUhAzJ50vKWxzi0Pt1sSttRLM25bAWYbbXd0YDwVgcflEirH%2BHi2dpoBmVyhe%2BWtd7isBTLxGM4MNDyRQZKBdXtlKf%2FJCLzBwua%2BGWh4BzsDE8RoY%2FyhuGQLsz3%2F5USg0Y4yjHvCufCrZlPYLMuztYt9%2Bjk%2BXjs5Y0JRJAQ0nHFbiNthaaDRQD4RhlfdPsvHKyXHSjj%2BhfYz2xbVVtsw7tbkIqxaAmg4b3kFwmjChh%2BSgRhNGIi57iyTKS45YIRDHiAONMMvyjvw70Iz2hzOMs3kQDX8qI3UARRXc2duQJLXW4MsN%2FdS864QJiQBUb1cZHnTeQvFETwTxSNXkFxdoCdoguZ2wwDdjXDOguvqcKMLkwOEOTG8mh%2FpoysOM7xGBMrapM8SnIM1aDL8PGat4waxJFPZIe7V9fZNlcQRklYiagKB%2BqLcEJ74yqlKqklmeGLGyjjSU3laimiB%2BCrAoryVwkTMgYGHUzHIUjMDr1sNPso3BeLZcKpjMmfisEwTzErRiQpUVurXmNgm0Dtjjn7WsuRCDqAMWvj1%2BAWxsHgcdPJUnRwnst6CwVIsQ1ij28vpoAALS5Ca6mIU1aujVaINklp9s%2FMtkEQ52fKCneMN4tzDDNGcsmiCsIZzGoYLcxXVhNW1mNCFLZb6q2MrILO1%2BmZKYPMorlBlIBcAACpxj1lvNSqgAAAAAElFTkSuQmCC&labelColor=%23232D4B&color=%23E57200) &nbsp; &nbsp; &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp; &nbsp; &nbsp;[![python](https://img.shields.io/badge/Python-3.12-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org) &nbsp; &nbsp; &nbsp;[![tensorflow](https://img.shields.io/badge/TensorFlow-2.16%2B-FF6F00.svg?style=flat&logo=tensorflow)](https://www.tensorflow.org) &nbsp; &nbsp; &nbsp;[![arXiv](https://img.shields.io/badge/arXiv-2412.08868-b31b1b.svg)](https://arxiv.org/abs/2412.08868)
 
 > **Paper:** W. Scott, *"Words of War: Decoding Presidential Rhetoric to Predict US Military Conflicts Using Deep Learning,"* arXiv:2412.08868, 2024. [[PDF]](https://arxiv.org/pdf/2412.08868)
 
@@ -82,7 +82,7 @@ Moreover, this interdisciplinary approach provides valuable tools for policymake
 
 The data for this project comes from Kaggle, but the author scraped the data from The Miller Center at the University of Virginia.<sup>2</sup> We added a column to the dataset that represents our binary categorical response variable (War), indicating whether the US entered a major war within one year of the president’s speech. We encode an observation’s value for the War variable as 1 if the US entered a major war within one year of the president’s speech; otherwise, we encode the observation’s value for the War variable as 0. We derived wars’ start dates from the US Congressional Research Service.<sup>3</sup>
 
-We perform some slight cleaning and preprocessing to set up the data for modeling. First, we checked for null values and found one missing transcript for a speech delivered by Thomas Jefferson on Nov. 8, 1808; we found the transcript via the Miller Center and added it to the dataset. Next, because the first war we consider (First Barbary War) started in 1801, we filter the dataset to speeches dated after 1800. 
+We perform some slight cleaning and preprocessing to set up the data for modeling. First, we checked for null values and found one missing transcript for a speech delivered by Thomas Jefferson on Nov. 8, 1808; we found the transcript via the Miller Center and added it to the dataset. Next, because the first war we consider (First Barbary War) started in 1801, we filter the dataset to speeches dated after 1800.
 
 Several transcripts end with the president’s signature; we remove the signature text from the transcripts column given that the president is identifiable from the president column and that text is not important for our modeling purposes. The transcripts also contain instances of long integers and floating point numbers when a president describes various treasury and debt statistics, for example. We remove floating point numbers and integers from the transcripts. Additionally, we convert the transcripts to lowercase and remove punctuation.
 
@@ -97,11 +97,11 @@ We battled with shape mismatches when trying to feed the vectorized representati
 The models we experiment with include:
 
 1) Multilayer Perceptron (MLP)
-   
+
 2) Recurrent Neural Network (RNN) with Long Short-Term Memory (LSTM)
 
 3) LSTM with Attention
-   
+
 4) BERT
 
 # Experiments and Results
@@ -131,7 +131,7 @@ In our second model, we reshape the input data to include a timestep dimension b
 </div>
 <p align="center">
 
-The RNN architecture with an LSTM layer performs better than the MLP; although the training and validation accuracy fluctuate somewhat, they steadily increase and reach over 0.9 by epoch ten. The training and validation loss steadily decrease across epochs. 
+The RNN architecture with an LSTM layer performs better than the MLP; although the training and validation accuracy fluctuate somewhat, they steadily increase and reach over 0.9 by epoch ten. The training and validation loss steadily decrease across epochs.
 
 ## LSTM with Attention
 <a name="lstm-with-attention"></a>
@@ -178,7 +178,7 @@ and false negatives.
 # Interpretable Learning
 <a name="interpretable-learning"></a>
 
-While accurate classification is desirable, we also try to identify discriminative features between the two classes. We use three approaches to help interpret our models and results. 
+While accurate classification is desirable, we also try to identify discriminative features between the two classes. We use three approaches to help interpret our models and results.
 
 In our first approach, we extract and analyze the attention weights from our third model. To do so, we create another model using the Model class, specifying the same inputs as our third model but setting the output to that of the attention layer. This allows us to extract the attention weights, providing insights into how the attention mechanism weighs different parts of the input sequence.
 
@@ -258,7 +258,7 @@ If we were to spend more time and expand our analysis, we would leverage the Par
 </details>
 <details>
 <summary><h1 style="font-size: 22px;">Manifest</h1></summary>
-  
+
 <details>
 <summary>Python Package (<code>src/words_of_war/</code>)</summary>
 
