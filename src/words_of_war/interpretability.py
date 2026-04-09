@@ -36,13 +36,14 @@ def extract_attention_weights(
         Array of attention weight outputs with shape
         ``(n_samples, ...)``.
     """
-    from tensorflow.keras.models import Model
+    import tensorflow as tf
 
-    attention_model = Model(
-        inputs=model.input,
+    # Create a function that extracts the attention layer's output
+    extractor = tf.keras.Model(
+        inputs=model.layers[0].input,
         outputs=model.layers[attention_layer_index].output,
     )
-    return np.asarray(attention_model.predict(X_data))
+    return np.asarray(extractor.predict(X_data))
 
 
 def analyze_attention_by_class(

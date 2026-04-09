@@ -49,6 +49,8 @@ The cleaned and vectorized datasets are included in the repository. To regenerat
 ## Reproducing Results
 Notebooks were developed on Google Colab with a T4 GPU. To run locally, ensure sufficient memory for BERT vectorization (~4GB RAM). File paths in the notebooks use relative references and should work without modification.
 
+> **Note:** The figures and metrics in the Report section below correspond to the results published in the [arXiv paper](https://arxiv.org/abs/2412.08868), which used the original dataset source. Re-running the notebooks with the current Kaggle dataset may produce different numerical results due to differences in the underlying data.
+
 <details>
 <summary><h1 style="font-size: 22px;">Report</h1></summary>
 
