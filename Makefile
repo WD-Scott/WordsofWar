@@ -1,15 +1,21 @@
-.PHONY: setup lint clean
+.PHONY: setup lint test test-cov clean
 
 setup:
 	python3 -m venv .venv
 	.venv/bin/pip install --upgrade pip
 	.venv/bin/pip install -r requirements.txt
+	.venv/bin/pip install -r requirements-dev.txt
 	.venv/bin/python -c "import nltk; nltk.download('punkt')"
 
 lint:
-	.venv/bin/pip install --quiet flake8 mypy
-	.venv/bin/python -m flake8 Python_Modules/ --max-line-length 100
-	.venv/bin/python -m mypy Python_Modules/
+	.venv/bin/python -m flake8 src/ tests/ --max-line-length 100
+	.venv/bin/python -m mypy src/ --ignore-missing-imports
+
+test:
+	.venv/bin/python -m pytest tests/ -v --tb=short
+
+test-cov:
+	.venv/bin/python -m pytest tests/ -v --tb=short --cov=words_of_war --cov-report=term-missing
 
 clean:
 	find . -name '__pycache__' -exec rm -rf {} +

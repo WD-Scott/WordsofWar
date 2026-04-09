@@ -1,10 +1,33 @@
 [project]
 name = "wordsofwar"
-version = "1.0.0"
+version = "2.0.0"
 description = "Deep learning NLP analysis of US presidential rhetoric to predict involvement in major wars"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+]
+
 [project.urls]
 Repository = "https://github.com/WD-Scott/WordsofWar"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+pythonpath = ["src"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".venv", "notebooks"]
